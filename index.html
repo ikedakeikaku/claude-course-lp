@@ -666,21 +666,21 @@
     <h2 class="section-title">まずは、お気軽に<br>ご相談ください</h2>
     <p class="section-desc">「自分の業務に使えるのか？」<br>「どのコースが合っているのか？」<br>オンラインで個別にお話しいたします。<br>もちろん、直接のお申込みも可能です。</p>
     <form class="cta-form" id="contact-form" action="https://formspree.io/f/xqeyydwz" method="POST">
-      <label>お名前</label>
-      <input type="text" name="name" placeholder="山田 太郎" required>
-      <label>会社名・屋号</label>
-      <input type="text" name="company" placeholder="株式会社◯◯ / ◯◯事務所">
-      <label>メールアドレス</label>
-      <input type="email" name="email" placeholder="example@company.co.jp" required>
-      <label>ご相談内容</label>
-      <select name="inquiry" required>
-        <option value="">選択してください</option>
+      <label for="field-name">お名前</label>
+      <input id="field-name" type="text" name="name" placeholder="山田 太郎" required>
+      <label for="field-company">会社名・屋号</label>
+      <input id="field-company" type="text" name="company" placeholder="株式会社◯◯ / ◯◯事務所">
+      <label for="field-email">メールアドレス</label>
+      <input id="field-email" type="email" name="email" placeholder="example@company.co.jp" required>
+      <label for="field-inquiry">ご相談内容</label>
+      <select id="field-inquiry" name="inquiry" required>
+        <option value="" disabled selected>選択してください</option>
         <option value="consultation">まずはオンラインで相談したい</option>
         <option value="apply">受講を申し込みたい</option>
         <option value="other">その他のお問い合わせ</option>
       </select>
-      <label>メッセージ（任意）</label>
-      <textarea name="message" placeholder="ご質問やご希望があればご記入ください"></textarea>
+      <label for="field-message">メッセージ（任意）</label>
+      <textarea id="field-message" name="message" placeholder="ご質問やご希望があればご記入ください"></textarea>
       <button type="submit" class="cta-submit">送信する</button>
       <p class="cta-note"><strong>ご相談後にしつこい営業は一切いたしません。</strong><br>「まだ検討中」「情報収集だけ」という方も、どうぞお気軽にお問い合わせください。<br>※ 定員10名・先着順です。無料相談をいただいた時点でお席を優先確保いたします。</p>
     </form>
