@@ -276,9 +276,15 @@
   .flow-link:hover { background: var(--accent); color: #fff; }
   .flow-seminar { margin-top: 3rem; text-align: center; background: var(--bg-white); border: 2px solid var(--border-accent); padding: 2.5rem 2rem; }
   .flow-seminar-title { font-family: var(--serif); font-weight: 600; font-size: 1.15rem; color: var(--text-primary); margin-bottom: 1.2rem; line-height: 1.5; }
-  .flow-seminar .flow-schedule { display: inline-block; text-align: left; margin: 0 auto 1.5rem; }
-  .flow-seminar-btn { display: inline-block; font-size: 0.95rem; color: #fff; background: var(--accent); text-decoration: none; font-weight: 600; padding: 0.75rem 2.5rem; transition: all 0.2s; }
-  .flow-seminar-btn:hover { opacity: 0.85; }
+  .seminar-dates { display: flex; flex-direction: column; gap: 0.75rem; margin-bottom: 1.5rem; max-width: 520px; margin-left: auto; margin-right: auto; }
+  .seminar-date-row { display: flex; align-items: center; justify-content: space-between; gap: 1rem; padding: 0.75rem 1rem; background: var(--bg-warm); border: 1px solid var(--border); }
+  .seminar-date-text { font-size: 0.92rem; color: var(--text-primary); font-weight: 500; white-space: nowrap; }
+  .seminar-date-btn { display: inline-block; font-size: 0.82rem; color: #fff; background: var(--accent); text-decoration: none; font-weight: 600; padding: 0.45rem 1.2rem; white-space: nowrap; transition: all 0.2s; }
+  .seminar-date-btn:hover { opacity: 0.85; }
+  .seminar-date-tbd { font-size: 0.8rem; color: var(--text-muted); white-space: nowrap; }
+  @media (max-width: 768px) {
+    .seminar-date-row { flex-direction: column; align-items: flex-start; gap: 0.4rem; }
+  }
   .flow-seminar-note { font-size: 0.82rem; color: var(--text-muted); margin-top: 1.2rem; line-height: 1.7; }
   @media (max-width: 768px) {
     .flow-steps { flex-direction: column; }
@@ -718,12 +724,20 @@
     </div>
     <div class="flow-seminar">
       <h3 class="flow-seminar-title">まずはオンラインセミナーへお気軽にどうぞ</h3>
-      <ul class="flow-schedule">
-        <li>3月27日（木）12:00〜13:00</li>
-        <li>4月14日（月）18:00〜19:00 <span class="tentative">（予定）</span></li>
-        <li>4月20日（日）12:00〜13:00 <span class="tentative">（予定）</span></li>
-      </ul>
-      <a href="https://ai-advance-20260327.peatix.com/view" target="_blank" class="flow-seminar-btn">Peatixで詳細を見る &rarr;</a>
+      <div class="seminar-dates">
+        <div class="seminar-date-row">
+          <span class="seminar-date-text">3月27日（木）12:00〜13:00</span>
+          <a href="https://ai-advance-20260327.peatix.com/view" target="_blank" class="seminar-date-btn">Peatixで申し込む &rarr;</a>
+        </div>
+        <div class="seminar-date-row">
+          <span class="seminar-date-text">4月14日（月）18:00〜19:00 <span class="tentative">（予定）</span></span>
+          <span class="seminar-date-tbd">詳細が決まり次第ご案内します</span>
+        </div>
+        <div class="seminar-date-row">
+          <span class="seminar-date-text">4月20日（日）12:00〜13:00 <span class="tentative">（予定）</span></span>
+          <span class="seminar-date-tbd">詳細が決まり次第ご案内します</span>
+        </div>
+      </div>
       <p class="flow-seminar-note">※ セミナーに参加せず、個別相談（オンライン対応可）からでもお申し込みいただけます。</p>
     </div>
   </div>
