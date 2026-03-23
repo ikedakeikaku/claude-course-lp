@@ -120,7 +120,7 @@
   }
   .hero::after { content: ''; position: absolute; bottom: 0; left: 0; right: 0; height: 180px; background: linear-gradient(to bottom, transparent, var(--bg-warm)); pointer-events: none; }
   .hero-date { font-family: var(--sans); font-size: 1rem; letter-spacing: 0.12em; color: var(--accent); margin-bottom: 0.5rem; font-weight: 600; opacity: 0; animation: fadeUp 1s 0.2s cubic-bezier(0.23,1,0.32,1) forwards; }
-  .hero-location { font-family: var(--sans); font-size: 0.85rem; color: var(--text-muted); margin-bottom: 2.5rem; font-weight: 400; letter-spacing: 0.06em; opacity: 0; animation: fadeUp 1s 0.35s cubic-bezier(0.23,1,0.32,1) forwards; }
+  .hero-location { font-family: var(--sans); font-size: 1.05rem; color: var(--text-primary); margin-bottom: 2.5rem; font-weight: 600; letter-spacing: 0.1em; opacity: 0; animation: fadeUp 1s 0.35s cubic-bezier(0.23,1,0.32,1) forwards; display: inline-flex; align-items: center; gap: 0.6rem; background: var(--accent-subtle); border: 1px solid var(--border-accent); padding: 0.5rem 1.4rem; }
   .hero h1 { font-family: var(--serif); font-weight: 700; font-size: clamp(2.4rem,5.2vw,4.2rem); line-height: 1.4; letter-spacing: 0.03em; color: var(--text-primary); margin-bottom: 2rem; opacity: 0; animation: fadeUp 1s 0.5s cubic-bezier(0.23,1,0.32,1) forwards; }
   .hero h1 em { font-style: normal; color: var(--accent); }
   .hero-sub { font-size: 1.1rem; color: var(--text-secondary); max-width: 540px; line-height: 2.1; margin-bottom: 3.5rem; font-weight: 400; opacity: 0; animation: fadeUp 1s 0.7s cubic-bezier(0.23,1,0.32,1) forwards; }
@@ -215,6 +215,8 @@
   .roadmap-steps { display: flex; gap: 1.2rem; margin-top: 3rem; }
   .step { flex: 1; padding: 2.2rem 1.8rem; background: var(--bg-white); border: 1px solid var(--border); }
   .step:first-child { border-color: var(--border-accent); box-shadow: 0 4px 24px rgba(180,90,30,0.08); text-align: center; }
+  .step-next { border: 2px solid var(--border-accent); background: var(--accent-subtle); position: relative; overflow: hidden; }
+  .step-next::before { content: ''; position: absolute; top: 0; left: 0; width: 100%; height: 3px; background: linear-gradient(90deg, var(--accent), var(--accent-deep)); }
   .step-num { font-family: var(--display); font-size: 0.72rem; letter-spacing: 0.25em; text-transform: uppercase; color: var(--accent); margin-bottom: 0.8rem; font-weight: 500; }
   .step h3 { font-family: var(--serif); font-weight: 600; font-size: 1.15rem; margin-bottom: 0.6rem; color: var(--text-primary); }
   .step p { font-size: 0.9rem; color: var(--text-secondary); line-height: 1.8; }
@@ -338,7 +340,7 @@
 
 <header class="hero">
   <div class="hero-date">2026年4月28日（火）・29日（水）開催</div>
-  <div class="hero-location">山梨県内で開催｜限定10名</div>
+  <div class="hero-location">&#x1F4CD; 山梨県内で開催｜限定10名</div>
   <h1>AIを、<em>経営の武器</em>にする<br>2日間</h1>
   <p class="hero-sub">
     ChatGPTは触ったことがある。<br>
@@ -389,36 +391,36 @@
   <div class="section-wrap reveal">
     <div class="section-label">Solution</div>
     <h2 class="section-title">なぜ、Claudeなのか</h2>
-    <p class="section-desc">Claudeは、チャットだけのAIではありません。Excel、Chrome、PowerPoint——普段使っている業務ツールの中で直接動くよう設計されたAIです。だから、学んだその日から業務が変わります。</p>
+    <p class="section-desc">Claudeは、チャットだけのAIではありません。Chrome、PowerPoint、Excel——普段使っている業務ツールの中で直接動くよう設計されたAIです。だから、学んだその日から業務が変わります。</p>
     <p class="section-desc" style="margin-top: 1rem;">業務を一番よく知っているのは、経営者自身です。どこに時間がかかっているのか、何を人に任せたいのか——それがわかる人がAIを学ぶからこそ、最短で成果が出ます。</p>
     <div class="solution-content">
       <div class="solution-text">
         <h3>「チャットで質問する」から<br>「業務の中でAIが動く」へ</h3>
-        <p>ChatGPTとの最大の違いは、Claudeが業務ツールと直接つながること。Excelのデータ分析、Chromeでの市場調査、PowerPointの資料作成——それぞれの作業の中で、AIがあなたの右腕として機能します。</p>
+        <p>ChatGPTとの最大の違いは、Claudeが業務ツールと直接つながること。Chromeでの市場調査、PowerPointの資料作成、Excelのデータ分析——それぞれの作業の中で、AIがあなたの右腕として機能します。</p>
         <div class="highlight">
           このコースでは「プロンプトの書き方」以上に大切なことを学びます。それは<strong>「スキル」</strong>という考え方です。自分の業務パターンをAIに覚えさせ、繰り返し使える仕組みにする。この概念を知っているかどうかで、AI活用の成果は大きく変わります。
         </div>
       </div>
       <div class="solution-features">
         <div class="feature-item">
-          <div class="feature-icon">Ex</div>
-          <div>
-            <h4>Claude in Excel</h4>
-            <p>財務データの分析、売上レポート作成、予実管理。経営者が最も時間を使う業務をAIで効率化します。</p>
-          </div>
-        </div>
-        <div class="feature-item">
           <div class="feature-icon">Cr</div>
           <div>
             <h4>Claude in Chrome</h4>
-            <p>情報収集・競合調査・市場分析をブラウザ上で自動化。判断に必要な情報を、AIが集めます。</p>
+            <p>情報収集・競合調査・市場分析をブラウザ上で効率化。判断に必要な情報を、AIが集めます。</p>
           </div>
         </div>
         <div class="feature-item">
           <div class="feature-icon">Pp</div>
           <div>
             <h4>Claude in PowerPoint</h4>
-            <p>提案書、報告書、事業計画。プロフェッショナルな資料をAIと共に、圧倒的な速度で仕上げます。</p>
+            <p>提案書、報告書、事業計画。プロフェッショナルな資料をAIと共に仕上げます。</p>
+          </div>
+        </div>
+        <div class="feature-item">
+          <div class="feature-icon">Ex</div>
+          <div>
+            <h4>Claude in Excel</h4>
+            <p>財務データの分析、売上レポート作成、財務計画。経営者が最も時間を使う業務をAIで効率化します。</p>
           </div>
         </div>
         <div class="feature-item">
@@ -503,15 +505,6 @@
         </ul>
       </div>
     </div>
-    <div class="prog-after">
-      <h4>講座＋サポートで、自社で使えるようになること</h4>
-      <ul class="prog-after-list">
-        <li>Coworkを自社の業務フローに組み込み、日報・定型メール・データ集計などを日常的にAIで処理できる</li>
-        <li>Excelで財務データの分析や資金繰り・売上計画の作成を、AIと一緒に進められる</li>
-        <li>Chrome・PowerPointの中でClaudeを使い、情報収集や資料作成の手間を減らせる</li>
-        <li>自分の業務パターンをスキルとして整理し、AIへの指示を毎回ゼロから書かずに済む仕組みをつくれる</li>
-      </ul>
-    </div>
   </div>
 </div>
 
@@ -539,28 +532,46 @@
   </div>
 </div>
 
+<!-- OUTCOME -->
+<div class="program-section">
+  <div class="section-wrap reveal">
+    <div class="section-label">Outcome</div>
+    <h2 class="section-title">講座＋サポートで<br>自社で使えるようになること</h2>
+    <p class="section-desc">2日間の研修と1ヶ月のフォローアップを通じて、AIを自走して使える状態を目指します。</p>
+    <div class="prog-after" style="margin-top: 3rem;">
+      <ul class="prog-after-list">
+        <li>Chromeで競合調査や情報収集をAIに任せ、判断に必要な情報を素早く手に入れられる</li>
+        <li>PowerPointの中でClaudeを使い、提案書・報告書の作成にかかる手間を減らせる</li>
+        <li>Excelで財務データの分析や資金繰り・売上計画の作成を、AIと一緒に進められる</li>
+        <li>Coworkを自社の業務フローに組み込み、日報・定型メール・データ集計などを日常的にAIで処理できる</li>
+        <li>自分の業務パターンをスキルとして整理し、AIへの指示を毎回ゼロから書かずに済む仕組みをつくれる</li>
+      </ul>
+    </div>
+  </div>
+</div>
+
 <!-- ROADMAP -->
 <div class="roadmap-section">
   <div class="section-wrap reveal">
     <div class="section-label">Roadmap</div>
-    <h2 class="section-title">この先がある</h2>
+    <h2 class="section-title">さらにステップアップ</h2>
     <p class="section-desc">今回のコースは「最初の一歩」です。修了後、希望者には次のステップをご案内します。</p>
     <div class="roadmap-steps">
       <div class="step">
         <div class="step-num">Step 01</div>
         <h3>Claude習得コース</h3>
-        <p>2日間のハンズオン研修で、Excel・Chrome・PowerPoint・Coworkの4つをClaudeで使いこなす力を身につけます。さらに受講後1ヶ月間のサポートで、学んだことを自社の業務で実際に運用できる状態まで仕上げます。</p>
+        <p>2日間のハンズオン研修で、Chrome・PowerPoint・Excel・Coworkの4つをClaudeで使いこなす力を身につけます。さらに受講後1ヶ月間のサポートで、学んだことを自社の業務で実際に運用できる状態まで仕上げます。</p>
         <div class="current-badge">今回のコース</div>
       </div>
-      <div class="step">
+      <div class="step step-next">
         <div class="step-num">Step 02</div>
         <h3>開発コース（初級）</h3>
-        <p>自社専用のツールやWebサイトを、エンジニアなしで構築する。</p>
+        <p>Claude習得コースで身につけたAI活用力をベースに、自社専用の業務ツールやWebサイトをエンジニアなしで構築します。顧客管理、予約受付、社内ポータルなど、外注すれば数十万円かかる仕組みを、自分の手でつくれるようになります。</p>
       </div>
-      <div class="step">
+      <div class="step step-next">
         <div class="step-num">Step 03</div>
         <h3>エージェントコース</h3>
-        <p>24時間稼働するAIエージェントを自社の業務に実装する。</p>
+        <p>AIが人に代わって判断・実行する「エージェント」を自社の業務に実装します。問い合わせ対応、レポート生成、データ監視など、24時間稼働するAIアシスタントを構築。人手不足の課題を、テクノロジーで根本から解決します。</p>
       </div>
     </div>
   </div>
@@ -619,7 +630,7 @@
         </div>
         <div class="overview-item">
           <div class="label">時間</div>
-          <div class="value">9:00 – 16:00（昼休憩1時間）</div>
+          <div class="value">10:00 – 17:00（昼休憩1時間）</div>
         </div>
         <div class="overview-item">
           <div class="label">会場</div>
@@ -646,11 +657,11 @@
     <h2 class="section-title">受講料</h2>
     <div class="pricing-box">
       <div class="pricing-badge">初回開催特別価格</div>
-      <div class="pricing-original">通常価格 148,000円（税抜）</div>
+      <div class="pricing-original">通常価格 198,000円（税抜）</div>
       <div class="pricing-current">98,000円</div>
       <div class="pricing-tax">（税抜）</div>
-      <p class="pricing-reason">Claude in Excel、Cowork、Claude in Chromeといった機能は、2026年に入ってから次々とリリースされた最新のツールです。だからこそ、まだ日本でこれらを体系的に学べる場はほとんどありません。本講座はその先駆けとして開催する初回講座です。限定10名の少人数制で、一人ひとりの業務に合わせて丁寧に進めます。初回にご参加いただく皆様の声を今後のカリキュラムに反映させたいという思いから、特別価格でご提供いたします。</p>
-      <div class="pricing-deadline">2026年4月10日（金）までのお申し込みに適用</div>
+      <p class="pricing-reason">Claude in Chrome、Claude in PowerPoint、Claude in Excel、Coworkといった機能は、2026年に入ってから次々とリリースされた最新のツールです。だからこそ、まだ日本でこれらを体系的に学べる場はほとんどありません。本講座はその先駆けとして開催する初回講座です。限定10名の少人数制で、一人ひとりの業務に合わせて丁寧に進めます。初回にご参加いただく皆様の声を今後のカリキュラムに反映させたいという思いから、特別価格でご提供いたします。</p>
+      <div class="pricing-deadline">お申し込み期限：2026年4月17日（金）</div>
       <p class="pricing-note">※ 受講内容にご満足いただけなかった場合は、個別にご相談ください。<br>※ 受講料はお申込み後1週間以内にお振込みいただきます。</p>
     </div>
   </div>
