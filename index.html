@@ -193,6 +193,23 @@
   .prog-after-list li { font-size: 0.92rem; color: var(--text-body); line-height: 1.7; display: flex; align-items: baseline; gap: 0.5rem; }
   .prog-after-list li::before { content: '✓'; color: var(--accent); font-weight: 700; flex-shrink: 0; }
 
+  /* ── SUPPORT ── */
+  .support-section { background: var(--bg-warm); }
+  .support-box { margin-top: 3rem; padding: 2.8rem; background: var(--bg-white); border: 2px solid var(--border-accent); position: relative; overflow: hidden; }
+  .support-box::before { content: ''; position: absolute; top: 0; left: 0; width: 100%; height: 4px; background: linear-gradient(90deg, var(--accent), var(--accent-deep)); }
+  .support-headline { font-family: var(--serif); font-weight: 600; font-size: 1.25rem; color: var(--text-primary); margin-bottom: 0.6rem; line-height: 1.6; }
+  .support-lead { font-size: 1rem; color: var(--text-secondary); line-height: 2; margin-bottom: 2rem; }
+  .support-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; margin-bottom: 2rem; }
+  .support-item { padding: 1.4rem 1.6rem; background: var(--bg-primary); border: 1px solid var(--border); }
+  .support-item .si-label { font-size: 0.68rem; letter-spacing: 0.12em; color: var(--accent); font-weight: 600; display: block; margin-bottom: 0.5rem; }
+  .support-item .si-title { font-family: var(--serif); font-weight: 600; font-size: 1.05rem; color: var(--text-primary); margin-bottom: 0.3rem; }
+  .support-item .si-desc { font-size: 0.9rem; color: var(--text-secondary); line-height: 1.8; }
+  .support-message { padding: 1.2rem 1.6rem; background: var(--accent-subtle); border-left: 3px solid var(--accent); font-family: var(--serif); font-size: 1.05rem; font-weight: 500; color: var(--text-primary); line-height: 1.9; }
+  @media (max-width: 768px) {
+    .support-grid { grid-template-columns: 1fr; }
+    .support-box { padding: 1.8rem; }
+  }
+
   /* ── ROADMAP ── */
   .roadmap-section { background: var(--bg-cream); }
   .roadmap-steps { display: flex; gap: 1.2rem; margin-top: 3rem; }
@@ -471,9 +488,9 @@
         <h3 class="prog-title">基盤をつくる</h3>
         <ul class="prog-items">
           <li>Claude基礎：プロンプト設計・スキル活用入門</li>
-          <li>Claude in Excel：財務・売上データの分析支援</li>
           <li>Claude in Chrome：情報収集・競合調査の効率化</li>
           <li>Claude in PowerPoint：提案書・報告書の作成支援</li>
+          <li>Claude in Excel：財務・売上データの分析支援、財務計画の作成支援</li>
         </ul>
       </div>
       <div class="prog-card">
@@ -487,13 +504,37 @@
       </div>
     </div>
     <div class="prog-after">
-      <h4>受講後に変わること</h4>
+      <h4>講座＋サポートで、自社で使えるようになること</h4>
       <ul class="prog-after-list">
-        <li>Excel・Chrome・PowerPointの中でClaudeを使い、資料作成や情報収集の手間を減らせるようになる</li>
-        <li>Coworkを使って、日報・定型メール・データ集計など日常の繰り返し作業をAIに任せられるようになる</li>
-        <li>自分の業務パターンをスキルとして整理し、毎回ゼロから指示を書かずに済む仕組みをつくれるようになる</li>
-        <li>自社にとってAIが効く業務・効かない業務を見極め、導入の優先順位を自分で判断できるようになる</li>
+        <li>Coworkを自社の業務フローに組み込み、日報・定型メール・データ集計などを日常的にAIで処理できる</li>
+        <li>Excelで財務データの分析や資金繰り・売上計画の作成を、AIと一緒に進められる</li>
+        <li>Chrome・PowerPointの中でClaudeを使い、情報収集や資料作成の手間を減らせる</li>
+        <li>自分の業務パターンをスキルとして整理し、AIへの指示を毎回ゼロから書かずに済む仕組みをつくれる</li>
       </ul>
+    </div>
+  </div>
+</div>
+
+<!-- SUPPORT -->
+<div class="support-section">
+  <div class="section-wrap reveal">
+    <div class="section-label">Follow-up</div>
+    <h2 class="section-title">2日間で終わりでは<br>ありません</h2>
+    <p class="section-desc">講座で学んだことを、自社の業務で実際に使えるようになるまで。受講後1ヶ月間、マンツーマンでサポートします。</p>
+    <div class="support-box">
+      <div class="support-grid">
+        <div class="support-item">
+          <span class="si-label">オンラインミーティング</span>
+          <div class="si-title">1時間 × 4回（週1回ペース）</div>
+          <p class="si-desc">「講座で習ったけど、自社でやろうとしたらうまくいかない」——そんな疑問を、画面を共有しながら一緒に解決します。業務への落とし込みを個別にサポートします。</p>
+        </div>
+        <div class="support-item">
+          <span class="si-label">チャット・メールサポート</span>
+          <div class="si-title">受講後1ヶ月間、いつでも質問OK</div>
+          <p class="si-desc">ミーティングの間に出てきた疑問や困りごとも、チャット・メールですぐに相談できます。小さなつまずきを放置せず、着実に定着させます。</p>
+        </div>
+      </div>
+      <div class="support-message">学んだだけで終わりにしない。自社の業務で実際に使えるようになるまで、徹底的にサポートします。</div>
     </div>
   </div>
 </div>
@@ -640,7 +681,7 @@
           <h3>受講後のサポートはありますか？</h3>
           <div class="faq-toggle">+</div>
         </div>
-        <div class="faq-a"><p>受講後1ヶ月間、メール・チャットによる質問対応と、業務別AI活用マップ（簡易版）の提供を予定しています。</p></div>
+        <div class="faq-a"><p>はい。受講後1ヶ月間、オンラインミーティング（1時間×4回・週1回ペース）とチャット・メールでの質問サポートをご提供します。講座で学んだことを自社の業務で実際に使えるようになるまで、個別にサポートします。</p></div>
       </div>
       <div class="faq-item">
         <div class="faq-q">
