@@ -268,6 +268,12 @@
   .flow-step h3 { font-family: var(--serif); font-weight: 600; font-size: 1.05rem; margin-bottom: 0.5rem; color: var(--text-primary); line-height: 1.5; }
   .flow-step p { font-size: 0.9rem; color: var(--text-secondary); line-height: 1.85; }
   .flow-step .flow-note { font-size: 0.82rem; color: var(--text-muted); margin-top: 0.6rem; line-height: 1.7; }
+  .flow-schedule { list-style: none; margin: 0.8rem 0; }
+  .flow-schedule li { font-size: 0.88rem; color: var(--text-body); line-height: 1.7; padding: 0.25rem 0; padding-left: 1rem; position: relative; }
+  .flow-schedule li::before { content: ''; width: 5px; height: 5px; background: var(--accent); position: absolute; left: 0; top: 0.65rem; }
+  .flow-schedule .tentative { color: var(--text-muted); }
+  .flow-link { display: inline-block; margin-top: 0.8rem; font-size: 0.85rem; color: var(--accent); text-decoration: none; font-weight: 600; border: 1px solid var(--border-accent); padding: 0.4rem 1.2rem; transition: all 0.2s; }
+  .flow-link:hover { background: var(--accent); color: #fff; }
   .flow-cta { margin-top: 2.5rem; text-align: center; font-size: 0.95rem; color: var(--text-secondary); line-height: 1.9; }
   @media (max-width: 768px) {
     .flow-steps { flex-direction: column; }
@@ -355,7 +361,7 @@
 
 <header class="hero">
   <div class="hero-date">2026年4月28日（火）・29日（水）開催</div>
-  <div class="hero-location">&#x1F4CD; 山梨県内で開催｜限定10名</div>
+  <div class="hero-location">山梨県内で開催｜限定10名</div>
   <h1>AIを、<em>経営の武器</em>にする<br>2日間</h1>
   <p class="hero-sub">
     ChatGPTは触ったことがある。<br>
@@ -559,7 +565,8 @@
         <li>PowerPointの中でClaudeを使い、提案書・報告書の作成にかかる手間を減らせる</li>
         <li>Excelで財務データの分析や資金繰り・売上計画の作成を、AIと一緒に進められる</li>
         <li>Coworkを自社の業務フローに組み込み、日報・定型メール・データ集計などを日常的にAIで処理できる</li>
-        <li>自分の業務パターンをスキルとして整理し、AIへの指示を毎回ゼロから書かずに済む仕組みをつくれる</li>
+        <li>自分の業務パターンをスキルとして整理し、繰り返し使える仕組みにできる</li>
+        <li>自社にとってAIが効く業務を見極め、導入の優先順位を自分で判断できるようになる</li>
       </ul>
     </div>
   </div>
@@ -691,7 +698,13 @@
       <div class="flow-step">
         <div class="flow-num">1</div>
         <h3>まずは講座の内容を知る</h3>
-        <p>オンラインセミナーに参加（3/27開催・Peatixで受付中）<br>Claudeの活用事例や講座内容を詳しくご紹介します。</p>
+        <p>オンラインセミナーでClaudeの活用事例や講座内容を詳しくご紹介します。</p>
+        <ul class="flow-schedule">
+          <li>3月27日（木）12:00〜13:00</li>
+          <li>4月14日（月）18:00〜19:00 <span class="tentative">（予定）</span></li>
+          <li>4月20日（日）12:00〜13:00 <span class="tentative">（予定）</span></li>
+        </ul>
+        <a href="https://ai-advance-20260327.peatix.com/view" target="_blank" class="flow-link">Peatixで詳細を見る &rarr;</a>
         <p class="flow-note">※ セミナーに参加せず、個別相談（オンライン対応可）からでもお申し込みいただけます。</p>
       </div>
       <div class="flow-step">
@@ -702,7 +715,7 @@
       <div class="flow-step">
         <div class="flow-num">3</div>
         <h3>受講開始</h3>
-        <p>当日はPCだけお持ちください。環境構築のサポートも講座内で行いますので、事前準備の心配はありません。</p>
+        <p>事前にClaudeの環境構築をサポートいたします。当日はすぐに実践に入れる状態で受講いただけます。</p>
       </div>
     </div>
     <p class="flow-cta">まずはお気軽に、オンラインセミナーや個別相談にお越しください。</p>
