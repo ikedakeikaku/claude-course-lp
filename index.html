@@ -302,6 +302,20 @@
   .faq-item.open .faq-a { max-height: 300px; opacity: 1; }
   .faq-a p { padding-top: 0.8rem; font-size: 0.95rem; color: var(--text-secondary); line-height: 1.9; }
 
+  /* ── TARGET ── */
+  .target-section { background: var(--bg-warm); }
+  .target-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin-top: 2.5rem; max-width: 680px; }
+  .target-item { background: var(--bg-white); border: 1px solid var(--border); padding: 1.2rem 1.4rem; font-size: 0.92rem; color: var(--text-body); line-height: 1.8; position: relative; padding-left: 2.2rem; }
+  .target-item::before { content: ''; width: 6px; height: 6px; background: var(--accent); position: absolute; left: 1rem; top: 1.45rem; }
+  .target-custom { margin-top: 3rem; text-align: center; padding: 2rem; border-top: 1px solid var(--border); }
+  .target-custom h3 { font-family: var(--serif); font-weight: 600; font-size: 1.05rem; color: var(--text-primary); margin-bottom: 0.8rem; line-height: 1.5; }
+  .target-custom p { font-size: 0.9rem; color: var(--text-secondary); line-height: 1.9; }
+  .target-custom a { color: var(--accent); text-decoration: none; font-weight: 600; }
+  .target-custom a:hover { text-decoration: underline; }
+  @media (max-width: 768px) {
+    .target-grid { grid-template-columns: 1fr; }
+  }
+
   /* ── CTA ── */
   .cta-section { background: var(--bg-warm); padding: 7rem 2rem; text-align: center; position: relative; overflow: hidden; }
   .cta-section .section-label { color: var(--accent); }
@@ -795,12 +809,30 @@
   </div>
 </div>
 
+<!-- TARGET -->
+<div class="target-section">
+  <div class="section-wrap reveal">
+    <div class="section-label">Who Is This For</div>
+    <h2 class="section-title">AIを業務に取り入れたい<br>経営者・管理職の方へ</h2>
+    <div class="target-grid">
+      <div class="target-item">AI活用に興味はあるが、何から始めればいいかわからない方</div>
+      <div class="target-item">ChatGPTなどを試したが、業務で定着しなかった方</div>
+      <div class="target-item">自社の業務効率化・生産性向上にAIを役立てたい方</div>
+      <div class="target-item">ITやプログラミングの専門知識がない方</div>
+    </div>
+    <div class="target-custom">
+      <h3>個社ごとの課題に合わせた研修も承ります</h3>
+      <p>業種や業務内容に応じてカリキュラムをカスタマイズした研修を、個別に実施することも可能です。<br>ご関心のある方は、お気軽に<a href="#contact">個別相談</a>よりお問い合わせください。</p>
+    </div>
+  </div>
+</div>
+
 <!-- CTA -->
 <div class="cta-section" id="contact">
   <div class="section-wrap reveal" style="padding: 0;">
     <div class="section-label">Contact</div>
     <h2 class="section-title">まずは、お気軽に<br>ご相談ください</h2>
-    <p class="section-desc">「自分の業務に使えるのか？」<br>「どのコースが合っているのか？」<br>オンラインで個別にお話しいたします。<br>もちろん、直接のお申込みも可能です。</p>
+    <p class="section-desc">「自分の業務に使えるのか？」「まず何から始めればいいのか？」<br>オンラインで個別にお話しいたします。<br>もちろん、直接のお申込みも可能です。</p>
     <form class="cta-form" id="contact-form" action="https://formspree.io/f/xqeyydwz" method="POST">
       <label for="field-name">お名前</label>
       <input id="field-name" type="text" name="name" placeholder="山田 太郎" required>
