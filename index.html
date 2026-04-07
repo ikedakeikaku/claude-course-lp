@@ -282,6 +282,9 @@
   .seminar-date-btn { display: inline-block; font-size: 0.82rem; color: #fff; background: var(--accent); text-decoration: none; font-weight: 600; padding: 0.45rem 1.2rem; white-space: nowrap; transition: all 0.2s; }
   .seminar-date-btn:hover { opacity: 0.85; }
   .seminar-date-tbd { font-size: 0.8rem; color: var(--text-muted); white-space: nowrap; }
+  .seminar-date-row.ended { opacity: 0.5; }
+  .seminar-date-row.ended .seminar-date-text { text-decoration: line-through; }
+  .seminar-date-ended { font-size: 0.8rem; color: var(--text-muted); font-weight: 500; white-space: nowrap; }
   @media (max-width: 768px) {
     .seminar-date-row { flex-direction: column; align-items: flex-start; gap: 0.4rem; }
   }
@@ -728,13 +731,13 @@
     <div class="flow-seminar">
       <h3 class="flow-seminar-title">まずはオンラインセミナーへお気軽にどうぞ</h3>
       <div class="seminar-dates">
-        <div class="seminar-date-row">
+        <div class="seminar-date-row ended">
           <span class="seminar-date-text">3月27日（金）12:00〜13:00</span>
-          <a href="https://ai-advance-20260327.peatix.com/view" target="_blank" class="seminar-date-btn">Peatixで申し込む &rarr;</a>
+          <span class="seminar-date-ended">終了しました</span>
         </div>
         <div class="seminar-date-row">
-          <span class="seminar-date-text">4月14日（火）18:00〜19:00 <span class="tentative">（予定）</span></span>
-          <span class="seminar-date-tbd">詳細が決まり次第ご案内します</span>
+          <span class="seminar-date-text">4月14日（火）18:00〜19:00</span>
+          <a href="https://ai-advance-20260414.peatix.com/view" target="_blank" class="seminar-date-btn">Peatixで申し込む &rarr;</a>
         </div>
         <div class="seminar-date-row">
           <span class="seminar-date-text">4月20日（月）12:00〜13:00 <span class="tentative">（予定）</span></span>
